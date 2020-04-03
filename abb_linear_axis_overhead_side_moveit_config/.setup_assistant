@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: abb_linear_axis_overhead_side
+    relative_path: urdf/abb_linear_axis_overhead_side.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/linear_axis_two_robots.srdf
+  CONFIG:
+    author_name: kathrind
+    author_email: doerfler.kathrin@gmail.com
+    generated_timestamp: 1585940383
