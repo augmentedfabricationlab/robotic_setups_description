@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="linear_axis">
+    <link name="axis">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="120"/>
+        <inertia ixx="-4.98000" iyy="-5.95200" izz="0.82800" ixy="-0.00000" ixz="2.70000" iyz="-0.00000"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/visual/axis.stl"/>
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/collision/axis.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="cartA_joint" type="prismatic">
+      <parent link="axis"/>
+      <child  link="cartA"/>
+      <origin xyz="1.926 0.349 0.812" rpy="0 0 0 "/>
+      <axis   xyz="1 0 0"/>
+      <limit lower="-1.926" upper="0.675" effort="100000" velocity="2.618" />
+      <dynamics damping="0.2" friction="0" />
+    </joint>
+
+    <link name="cartA">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="120.00000"/>
+        <inertia ixx="-4.98000" iyy="-5.95200" izz="0.82800" ixy="-0.00000" ixz="2.70000" iyz="-0.00000"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/visual/cart.stl"/>
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/collision/cart.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="cartB_joint" type="prismatic">
+      <parent link="axis"/>
+      <child  link="cartB"/>
+      <origin xyz="1.926 0.349 0.812" rpy="0 0 0 "/>
+      <axis   xyz="1 0 0"/>
+      <limit lower="-0.675" upper="1.926" effort="100000" velocity="2.618" />
+      <dynamics damping="0.2" friction="0" />
+    </joint>
+
+    <link name="cartB">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="120.00000"/>
+        <inertia ixx="-4.98000" iyy="-5.95200" izz="0.82800" ixy="-0.00000" ixz="2.70000" iyz="-0.00000"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/visual/cart.stl"/>
+        </geometry>
+        <xacro:material_abb_white />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://abb_linear_axis/meshes/collision/cart.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+  </xacro:macro>
+</robot>
+
+

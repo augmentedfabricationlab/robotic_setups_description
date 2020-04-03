@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="brick_suction_tool"  params="prefix connected_to">
+    <joint name="${prefix}brick_suction_tool_joint" type="fixed">
+      <parent link="${connected_to}"/>
+      <child link="${prefix}brick_suction_tool"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>  
+    </joint>
+    <link name="${prefix}brick_suction_tool">
+      <visual>
+        <geometry>
+          <mesh filename="package://abb_end_effectors/meshes/visual/suction_tool_straight.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://abb_end_effectors/meshes/collision/suction_tool_straight.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- TCP frame -->
+    <joint name="${prefix}tcp_joint" type="fixed">
+      <origin xyz="0 0 0.307" rpy="0 0 0"/>
+      <parent link="${prefix}brick_suction_tool"/>
+      <child link="${prefix}tcp"/>
+    </joint>
+    <link name="${prefix}tcp"/>
+
+  </xacro:macro>
+</robot>

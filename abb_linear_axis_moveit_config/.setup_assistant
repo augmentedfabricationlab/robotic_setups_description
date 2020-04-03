@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: abb_linear_axis
+    relative_path: urdf/abb_linear_axis.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/abb_linear_axis.srdf
+  CONFIG:
+    author_name: Romana Rust
+    author_email: rust@arch.ethz.ch
+    generated_timestamp: 1548263946

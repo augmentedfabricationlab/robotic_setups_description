@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot name="abb_linear_axis" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_linear_axis)/urdf/abb_linear_axis_macro.xacro"/>
+  <xacro:abb_linear_axis />
+</robot>

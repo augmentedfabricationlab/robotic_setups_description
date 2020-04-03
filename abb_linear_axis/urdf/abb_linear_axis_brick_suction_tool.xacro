@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="abb_linear_axis_suction_tool" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_linear_axis)/urdf/abb_linear_axis_macro.xacro"/>
+  <xacro:include filename="$(find abb_end_effectors)/urdf/brick_suction_tool_straight.xacro"/>
+
+  <xacro:abb_linear_axis />
+
+  <!-- end-effector -->
+  <xacro:brick_suction_tool prefix="" connected_to="tool0"/>
+
+</robot>
+
+
