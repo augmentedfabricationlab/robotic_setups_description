@@ -1,5 +1,5 @@
 controller_list:
-  - name: fake_robotA_axis_controller
+  - name: fake_manipulatorA_axis_controller
     joints:
       - cartA_joint
       - robotA_joint_1
@@ -8,7 +8,7 @@ controller_list:
       - robotA_joint_4
       - robotA_joint_5
       - robotA_joint_6
-  - name: fake_robotB_axis_controller
+  - name: fake_manipulatorB_axis_controller
     joints:
       - cartB_joint
       - robotB_joint_1
@@ -17,7 +17,7 @@ controller_list:
       - robotB_joint_4
       - robotB_joint_5
       - robotB_joint_6
-  - name: fake_robotA_controller
+  - name: fake_manipulatorA_controller
     joints:
       - robotA_joint_1
       - robotA_joint_2
@@ -25,7 +25,7 @@ controller_list:
       - robotA_joint_4
       - robotA_joint_5
       - robotA_joint_6
-  - name: fake_robotB_controller
+  - name: fake_manipulatorB_controller
     joints:
       - robotB_joint_1
       - robotB_joint_2

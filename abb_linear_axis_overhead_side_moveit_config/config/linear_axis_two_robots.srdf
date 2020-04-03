@@ -9,20 +9,20 @@
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
-    <group name="robotA_axis">
+    <group name="manipulatorA_axis">
         <chain base_link="axis" tip_link="robotA_tool0" />
     </group>
-    <group name="robotB_axis">
+    <group name="manipulatorB_axis">
         <chain base_link="axis" tip_link="robotB_tool0" />
     </group>
-    <group name="robotA">
+    <group name="manipulatorA">
         <chain base_link="robotA_base_link" tip_link="robotA_tool0" />
     </group>
-    <group name="robotB">
+    <group name="manipulatorB">
         <chain base_link="robotB_base_link" tip_link="robotB_tool0" />
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-    <group_state name="homeA" group="robotA_axis">
+    <group_state name="homeA" group="manipulatorA_axis">
         <joint name="cartA_joint" value="0" />
         <joint name="robotA_joint_1" value="0" />
         <joint name="robotA_joint_2" value="0" />
@@ -31,7 +31,7 @@
         <joint name="robotA_joint_5" value="0" />
         <joint name="robotA_joint_6" value="0" />
     </group_state>
-    <group_state name="homeB" group="robotA_axis">
+    <group_state name="homeB" group="manipulatorA_axis">
         <joint name="cartA_joint" value="0" />
         <joint name="robotA_joint_1" value="0" />
         <joint name="robotA_joint_2" value="0" />
@@ -67,7 +67,7 @@
     <disable_collisions link1="robotA_link_3" link2="robotA_link_5" reason="Never" />
     <disable_collisions link1="robotA_link_3" link2="robotA_link_6" reason="Never" />
     <disable_collisions link1="robotA_link_4" link2="robotA_link_5" reason="Adjacent" />
-    <disable_collisions link1="robotA_link_4" link2="robotA_link_6" reason="User"/>
+    <disable_collisions link1="robotA_link_4" link2="robotA_link_6" reason="User" />
     <disable_collisions link1="robotA_link_5" link2="robotA_link_6" reason="Adjacent" />
     <disable_collisions link1="robotB_base_link" link2="robotB_link_1" reason="Adjacent" />
     <disable_collisions link1="robotB_base_link" link2="robotB_link_3" reason="Never" />
@@ -81,6 +81,6 @@
     <disable_collisions link1="robotB_link_3" link2="robotB_link_5" reason="Never" />
     <disable_collisions link1="robotB_link_3" link2="robotB_link_6" reason="Never" />
     <disable_collisions link1="robotB_link_4" link2="robotB_link_5" reason="Adjacent" />
-    <disable_collisions link1="robotB_link_4" link2="robotB_link_6" reason="User"/>
+    <disable_collisions link1="robotB_link_4" link2="robotB_link_6" reason="User" />
     <disable_collisions link1="robotB_link_5" link2="robotB_link_6" reason="Adjacent" />
 </robot>
