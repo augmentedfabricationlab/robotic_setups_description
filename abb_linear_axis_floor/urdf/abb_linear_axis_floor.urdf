@@ -22,7 +22,7 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/visual/axis_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/visual/axis_floor.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -30,7 +30,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/collision/axis_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/collision/axis_floor.stl"/>
       </geometry>
     </collision>
   </link>
@@ -50,7 +50,7 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/visual/cart_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/visual/cart_floor.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -58,7 +58,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/collision/cart_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/collision/cart_floor.stl"/>
       </geometry>
     </collision>
   </link>
@@ -78,7 +78,7 @@
     </inertial>
     <visual>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/visual/cart_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/visual/cart_floor.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -86,7 +86,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://abb_linear_axis/meshes/collision/cart_floor.stl"/>
+        <mesh filename="package://abb_linear_axis_floor/meshes/collision/cart_floor.stl"/>
       </geometry>
     </collision>
   </link>
