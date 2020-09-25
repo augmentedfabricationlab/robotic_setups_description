@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: kathrindoerfler
     author_email: doerfler@tum.de
-    generated_timestamp: 1601070476
+    generated_timestamp: 1601074621
