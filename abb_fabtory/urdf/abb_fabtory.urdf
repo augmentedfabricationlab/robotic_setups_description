@@ -73,7 +73,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/base_link.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/base_link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -82,7 +82,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/base_link.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/base_link.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -93,7 +93,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/link_1.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/link_1.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -102,7 +102,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/link_1.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/link_1.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -113,7 +113,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/cylinder.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/cylinder.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -122,7 +122,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/cylinder.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/cylinder.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -133,7 +133,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/piston.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/piston.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -142,7 +142,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/piston.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/piston.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -153,7 +153,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/visual/link_2.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/visual/link_2.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -162,7 +162,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/collision/link_2.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/collision/link_2.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -173,7 +173,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/visual/link_3.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/visual/link_3.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -182,7 +182,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/collision/link_3.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/collision/link_3.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -193,7 +193,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/visual/link_4.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/visual/link_4.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -202,7 +202,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700_150_320/collision/link_4.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700_150_320/collision/link_4.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -213,7 +213,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/link_5.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/link_5.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -222,7 +222,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/link_5.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/link_5.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
@@ -233,7 +233,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/visual/link_6.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/visual/link_6.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.9254902 0.9254902 0.9058824 1"/>
@@ -242,7 +242,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://abb_irb6700_support/meshes/irb6700/collision/link_6.stl"/>
+        <mesh filename="package://abb_irb6700_150_320/meshes/irb6700/collision/link_6.stl"/>
       </geometry>
       <material name="">
         <color rgba="1 1 0 1"/>
