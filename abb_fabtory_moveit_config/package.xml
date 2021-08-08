@@ -1,9 +1,9 @@
 <package>
 
-  <name>abb_fabtory_moveit</name>
+  <name>abb_fabtory_moveit_config</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the abb_irb6700_linear_axis with the MoveIt! Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the abb_fabtory with the MoveIt! Motion Planning Framework
   </description>
   <author email="julian.trummer@tum.de">Julian Trummer</author>
   <maintainer email="julian.trummer@tum.de">Julian Trummer</maintainer>

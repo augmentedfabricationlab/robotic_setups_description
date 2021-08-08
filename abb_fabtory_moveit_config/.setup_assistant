@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
     package: abb_fabtory
-    relative_path: urdf/abb_robot_plattform.urdf
+    relative_path: urdf/abb_fabtory.urdf
     xacro_args: "--inorder "
   SRDF:
-    relative_path: config/abb_irb6700_linear_axis.srdf
+    relative_path: config/abb_fabtory.srdf
   CONFIG:
     author_name: Julian Trummer
     author_email: julian.trummer@tum.de
-    generated_timestamp: 1626967668
+    generated_timestamp: 1628428888
