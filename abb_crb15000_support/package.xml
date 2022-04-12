@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>abb_crb15000</name>
+  <name>abb_crb15000_support</name>
   <version>0.0.0</version>
-  <description>The abb_crb1500 package</description>
+  <description>The abb_crb15000_support package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
