@@ -27,6 +27,6 @@
   <!-- Spawn Gazebo ROS controllers -->
   <node name="gazebo_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller" />
   <!-- Load ROS controllers -->
-  <include file="$(dirname)/ros_controllers.launch"/>
+  <include file="$(find abb_crb15000_5_95_moveit_config)/launch/ros_controllers.launch"/>
 
 </launch>
