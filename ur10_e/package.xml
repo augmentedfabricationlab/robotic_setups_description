@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ur10_e_table</name>
+  <name>ur10_e</name>
   <version>0.0.0</version>
-  <description>The ur10_e_table package</description>
+  <description>The ur10_e package</description>
   <maintainer email="doerfler@tum.de">dk</maintainer>
   <license>MIT</license>
   <buildtool_depend>catkin</buildtool_depend>

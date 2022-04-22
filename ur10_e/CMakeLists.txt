@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ur10_e_table)
+project(ur10_e)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -118,7 +118,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/ur10_e_table.cpp
+#   src/${PROJECT_NAME}/ur10_e.cpp
 # )
 
 ## Add cmake target dependencies of the library
