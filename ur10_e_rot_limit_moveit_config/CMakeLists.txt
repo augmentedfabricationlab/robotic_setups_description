@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ur10_e_moveit_config)
+project(ur10_e_rot_limit_moveit_config)
 
 find_package(catkin REQUIRED)
 

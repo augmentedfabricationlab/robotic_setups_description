@@ -1,6 +1,6 @@
 moveit_setup_assistant_config:
   URDF:
-    package: ur10_e
+    package: ur10_e_rot_limit
     relative_path: urdf/ur10e_rot_limit.urdf
     xacro_args: "--inorder "
   SRDF:

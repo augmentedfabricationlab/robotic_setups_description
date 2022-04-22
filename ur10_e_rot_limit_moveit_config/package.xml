@@ -1,6 +1,6 @@
 <package>
 
-  <name>ur10_e_moveit_config</name>
+  <name>ur10_e_rot_limit_moveit_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the ur10e with the MoveIt! Motion Planning Framework
@@ -27,8 +27,8 @@
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <build_depend>ur10_e</build_depend>
-  <run_depend>ur10_e</run_depend>
+  <build_depend>ur10_e_rot_limit</build_depend>
+  <run_depend>ur10_e_rot_limit</run_depend>
 
 
 </package>
