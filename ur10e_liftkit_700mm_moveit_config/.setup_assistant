@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_description
+    relative_path: urdf/ur10e_liftkit_700mm.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur10e_liftkit_700mm.srdf
+  CONFIG:
+    author_name: Gido Dielemans
+    author_email: gido.dielemans@tum.de
+    generated_timestamp: 1682413609

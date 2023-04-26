@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ur10e_liftkit_700mm</name>
+  <version>1.3.1</version>
+  <description>
+      URDF description for UR10e and Ewellix Liftkit 700mm
+  </description>
+
+  <author>Gido Dielemans</author>
+  <maintainer email="gido.dielemans@tum.de">Gido Dielemans</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://wiki.ros.org/ur_description</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+</package>
