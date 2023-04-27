@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   URDF:
     package: ur10e_liftkit_700mm
-    relative_path: urdf/ur10e_liftkit_700mm.xacro
+    relative_path: urdf/ur10e_liftkit_700mm.urdf
     xacro_args: ""
   SRDF:
     relative_path: config/ur10e_liftkit_700mm.srdf
