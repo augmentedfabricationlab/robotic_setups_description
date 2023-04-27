@@ -1,6 +1,6 @@
 moveit_setup_assistant_config:
   URDF:
-    package: robot_description
+    package: ur10e_liftkit_700mm
     relative_path: urdf/ur10e_liftkit_700mm.xacro
     xacro_args: ""
   SRDF:

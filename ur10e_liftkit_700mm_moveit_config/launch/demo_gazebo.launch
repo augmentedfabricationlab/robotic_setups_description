@@ -25,7 +25,7 @@
   <arg name="gazebo_gui" default="true"/>
   <arg name="paused" default="false"/>
   <!-- By default, use the urdf location provided from the package -->
-  <arg name="urdf_path" default="$(find robot_description)/urdf/ur10e_liftkit_700mm.xacro"/>
+  <arg name="urdf_path" default="$(find ur10e_liftkit_700mm)/urdf/ur10e_liftkit_700mm.xacro"/>
 
   <!-- launch the gazebo simulator and spawn the robot -->
   <include file="$(find ur10e_liftkit_700mm_moveit_config)/launch/gazebo.launch" >
