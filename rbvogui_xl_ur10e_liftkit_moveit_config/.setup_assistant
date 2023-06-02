@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   URDF:
-    package: rbvogui_description
-    relative_path: robots/rbvogui_xl_lift_ur10e.urdf
+    package: rbvogui_xl_ur10e_liftkit
+    relative_path: urdf/rbvogui_xl_lift_ur10e.urdf
     xacro_args: ""
   SRDF:
     relative_path: config/rbvogui.srdf
