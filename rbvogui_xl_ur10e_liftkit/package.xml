@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rbvogui_xl_ur10e_liftkit</name>
+  <version>1.0.0</version>
+  <description>
+      URDF description for UR10e and Ewellix Liftkit 700mm on the RB-VoguiXL
+  </description>
+
+  <author>Gido Dielemans</author>
+  <maintainer email="gido.dielemans@tum.de">Gido Dielemans</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://wiki.ros.org/ur_description</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+</package>
