@@ -703,7 +703,7 @@
   <!-- Lift base link -->
   <link name="robot_ewellix_lift_base_link">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 -0.23376"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.11"/>
       <geometry>
         <mesh filename="package://ewellix_description/meshes/ewellix_lift_base_700mm.stl"/>
       </geometry>
