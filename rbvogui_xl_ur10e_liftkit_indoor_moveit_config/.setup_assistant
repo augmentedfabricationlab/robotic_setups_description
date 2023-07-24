@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rbvogui_xl_ur10e_liftkit
+    relative_path: urdf/rbvogui_xl_lift_ur10e_indoor.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/rbvogui.srdf
+  CONFIG:
+    author_name: Begum Saral
+    author_email: begum.saral@tum.de
+    generated_timestamp: 1685624707
