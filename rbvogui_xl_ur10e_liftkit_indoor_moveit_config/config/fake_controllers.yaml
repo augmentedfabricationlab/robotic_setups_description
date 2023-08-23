@@ -1,0 +1,31 @@
+controller_list:
+  - name: fake_ur10e_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - robot_arm_shoulder_pan_joint
+      - robot_arm_shoulder_lift_joint
+      - robot_arm_elbow_joint
+      - robot_arm_wrist_1_joint
+      - robot_arm_wrist_2_joint
+      - robot_arm_wrist_3_joint
+  - name: fake_liftkit_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - robot_ewellix_lift_top_joint
+  - name: fake_ur10e_and_liftkit_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - robot_ewellix_lift_top_joint
+      - robot_arm_shoulder_pan_joint
+      - robot_arm_shoulder_lift_joint
+      - robot_arm_elbow_joint
+      - robot_arm_wrist_1_joint
+      - robot_arm_wrist_2_joint
+      - robot_arm_wrist_3_joint
+initial:  # Define initial robot poses.
+  - group: ur10e
+    pose: home
+  - group: liftkit
+    pose: home
+  - group: ur10e_and_liftkit
+    pose: home
