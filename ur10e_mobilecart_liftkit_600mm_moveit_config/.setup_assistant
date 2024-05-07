@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ur10e_mobilecart_liftkit_600mm
+    relative_path: urdf/ur10e_mobilecart_liftkit_600mm.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur10e_mobilecart_liftkit.srdf
+  CONFIG:
+    author_name: Lidia Atanasova
+    author_email: lidia.atanasova@tum.de
+    generated_timestamp: 1715036172

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <robot xmlns:xacro="https://ros.org/wiki/xacro">
+        <xacro:macro name="mobilecart_liftkit_600mm" params="prefix">
+            <link name="${prefix}mobilecart">
+                <visual>
+                    <geometry>
+                        <mesh filename="package://ur10e_mobilecart_liftkit_600mm/meshes/visual/mobilecart.stl"/>
+                    </geometry>
+                    <material name="">
+                        <color rgba="0.7 0.7 0.7 1.0"/>
+                    </material>
+                </visual>
+                <collision>
+                    <geometry>
+                        <mesh filename="package://ur10e_mobilecart_liftkit_600mm/meshes/collision/mobilecart.stl"/>
+                    </geometry>
+                </collision>
+            </link>
+
+            <joint name="${prefix}liftkit_joint" type="prismatic">
+                <parent link="${prefix}mobilecart"/>
+                <child link="${prefix}liftkit_600mm"/>
+                <!-- Here we enter the joint position just defined before -->
+                <origin xyz="0 0 1.002" rpy="0 0 0"/>
+                <!-- Here we define the axis along which the geometry is moved -->
+                <axis xyz="0 0 1"/>
+                <!-- Here we define the joint's upper and lower limits -->
+                <limit effort="1000.0" lower="0.0" upper="0.602" velocity="0.04"/>
+            </joint>
+
+            <link name="${prefix}liftkit_600mm">
+                <visual>
+                    <geometry>
+                        <mesh filename="package://ur10e_mobilecart_liftkit_600mm/meshes/visual/liftkit_600mm.stl"/>
+                    </geometry>
+                    <material name="">
+                        <color rgba="0.7 0.7 0.7 1.0"/>
+                    </material>
+                </visual>
+                <collision>
+                    <geometry>
+                        <mesh filename="package://ur10e_mobilecart_liftkit_600mm/meshes/collision/liftkit_600mm.stl"/>
+                    </geometry>
+                </collision>
+            </link>
+            
+        </xacro:macro>
+    </robot>
