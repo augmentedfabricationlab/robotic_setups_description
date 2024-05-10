@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rbvogui_description
+    relative_path: robots/SHRXL-200102AB.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/rbvogui.srdf
+  CONFIG:
+    author_name: Gido Dielemans
+    author_email: gido.dielemans@tum.de
+    generated_timestamp: 1715090312

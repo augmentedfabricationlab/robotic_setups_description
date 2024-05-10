@@ -1,0 +1,30 @@
+<launch>
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+  <arg name="sim" default="false" />
+  <arg name="rviz" default="true" />
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <rosparam param="source_list">[robot/joint_states, robot/arm/joint_states, robot/lift/joint_states]</rosparam>
+  </node>
+
+  <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+  <include file="$(dirname)/move_group.launch">
+    <arg name="load_robot_description" value="true"/>
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <!--arg name="sim" value="$(arg sim)"/-->
+  </include>
+
+  <include file="$(dirname)/ros_control_moveit_controller_manager.launch.xml"/>
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+
+  <include if="$(arg rviz)" file="$(dirname)/moveit_rviz.launch">
+    <!--arg name="config" value="true"/-->
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+  
+</launch>

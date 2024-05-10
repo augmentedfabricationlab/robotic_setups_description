@@ -1,0 +1,30 @@
+controller_list:
+  - name: ur20_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot_arm_shoulder_pan_joint
+      - robot_arm_shoulder_lift_joint
+      - robot_arm_elbow_joint
+      - robot_arm_wrist_1_joint
+      - robot_arm_wrist_2_joint
+      - robot_arm_wrist_3_joint
+  - name: liftkit_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot_ewellix_lift_top_joint
+  - name: ur20_and_liftkit_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot_ewellix_lift_top_joint
+      - robot_arm_shoulder_pan_joint
+      - robot_arm_shoulder_lift_joint
+      - robot_arm_elbow_joint
+      - robot_arm_wrist_1_joint
+      - robot_arm_wrist_2_joint
+      - robot_arm_wrist_3_joint
