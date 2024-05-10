@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(rbvogui_xl_ur10e_liftkit)
+project(rbvogui_xl_ur20_liftkit)
 
 find_package(catkin REQUIRED)
 
