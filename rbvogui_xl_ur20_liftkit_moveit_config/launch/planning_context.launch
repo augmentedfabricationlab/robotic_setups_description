@@ -20,7 +20,6 @@
   <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->
   <group ns="$(arg robot_description)_kinematics">
     <rosparam command="load" file="$(find rbvogui_xl_ur20_liftkit_moveit_config)/config/kinematics.yaml"/>
-    <rosparam command="load" ns="liftkit" file="$(find ewellix_driver)/config/lift_700mm.yaml"/>
     <rosparam command="load" ns="ur20" file="$(find ur_description)/config/ur20/default_kinematics.yaml"/>
   </group>
 
