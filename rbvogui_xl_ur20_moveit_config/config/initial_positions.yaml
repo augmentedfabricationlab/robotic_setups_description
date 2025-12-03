@@ -1,0 +1,18 @@
+# Default initial positions for rbvogui_xl's ros2_control fake system
+
+initial_positions:
+  robot_arm_elbow_joint: 0
+  robot_arm_shoulder_lift_joint: 0
+  robot_arm_shoulder_pan_joint: 0
+  robot_arm_wrist_1_joint: 0
+  robot_arm_wrist_2_joint: 0
+  robot_arm_wrist_3_joint: 0
+  robot_front_left_steering_joint: 0
+  robot_front_left_wheel_joint: 0
+  robot_front_right_steering_joint: 0
+  robot_front_right_wheel_joint: 0
+  robot_back_left_steering_joint: 0
+  robot_back_left_wheel_joint: 0
+  robot_back_right_steering_joint: 0
+  robot_back_right_wheel_joint: 0
+  robot_ewellix_lower_joint: 0

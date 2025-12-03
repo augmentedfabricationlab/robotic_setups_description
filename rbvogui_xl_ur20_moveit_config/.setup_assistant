@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: rbvogui_xl_ur20
+    relative_path: shrxl-250502ab.xacro
+  srdf:
+    relative_path: config/rbvogui_xl.srdf
+  package_settings:
+    author_name: Gido Dielemans
+    author_email: gido.dielemans@tum.de
+    generated_timestamp: 1764729422
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

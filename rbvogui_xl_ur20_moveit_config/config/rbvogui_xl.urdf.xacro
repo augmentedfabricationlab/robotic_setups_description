@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rbvogui_xl">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import rbvogui_xl urdf file (without base hardware controllers for demo mode) -->
+    <xacro:include filename="$(find rbvogui_xl_ur20)/shrxl-250502ab.xacro" />
+
+    <!-- Import control_xacro for the arm (mock system in demo) -->
+    <xacro:include filename="rbvogui_xl.ros2_control.xacro" />
+
+    <xacro:rbvogui_xl_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<robot name="rbvogui_xl" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- ***************** -->
+    <!-- Imported elements -->
+    <!-- ***************** -->
+    <!-- First we import all posible elements defined in the urdf.xacro files. All these elements are defined as macro:xacros -->
+
+    <!-- Import rbvogui_xl base elements-->
+    <xacro:include filename="$(find robotnik_description)/urdf/bases/rbvogui_xl/rbvogui_xl_base.urdf.xacro" />
+
+    <!-- Commented out for MoveIt demo - demo.launch.py provides its own ros2_control config -->
+    <!-- <xacro:include filename="$(find robotnik_description)/urdf/base_hw/rbvogui_xl.ros2_control.urdf" /> -->
+    
+    <xacro:arg name="include_gazebo_ignition_control" default="false"/>
+    <xacro:if value="$(arg include_gazebo_ignition_control)">
+        <xacro:include filename="$(find robotnik_description)/simulators/gazebo_ignition/rbvogui_xl/rbvogui_xl_control.urdf.xacro" />
+    </xacro:if>
+
+    <!-- Import all available sensors -->
+    <xacro:include filename="$(find robotnik_sensors)/urdf/all_sensors.urdf.xacro" />
+
+    <xacro:property name="front_laser_offset_x" value="0.53" />
+    <xacro:property name="front_laser_offset_y" value="0.33" />
+    <xacro:property name="front_laser_offset_z" value="0.1145" />
+
+    <xacro:property name="rear_laser_offset_x" value="-0.53" />
+    <xacro:property name="rear_laser_offset_y" value="-0.33" />
+    <xacro:property name="rear_laser_offset_z" value="0.1145" />
+
+    <xacro:property name="front_rgbd_camera_offset_x" value="0.46462" />
+    <xacro:property name="front_rgbd_camera_offset_y" value="0.0" />
+    <xacro:property name="front_rgbd_camera_offset_z" value="0.18258" />
+
+    <xacro:property name="rear_rgbd_camera_offset_x" value="-0.515" />
+    <xacro:property name="rear_rgbd_camera_offset_y" value="0.0" />
+    <xacro:property name="rear_rgbd_camera_offset_z" value="0.29" />
+
+    <!-- Flag to select the high or low quality model -->
+    <xacro:property name="hq" value="true" />
+
+    <!-- Launch Arguments -->
+	<xacro:arg name="namespace" default="robot"/>
+	<xacro:arg name="prefix" default="robot_"/>
+	<xacro:arg name="gazebo_ignition" default="false"/>
+
+    <xacro:rbvogui_xl prefix="$(arg prefix)" hq="${hq}" />
+
+    <!-- SENSORS see robotnik_sensors for the specific configuration -->
+
+    <!-- IMU -->
+    <xacro:sensor_vectornav
+        frame_prefix="$(arg prefix)imu_"
+        parent="$(arg prefix)chassis_link"
+        node_namespace="$(arg namespace)"
+        gazebo_ignition="$(arg gazebo_ignition)">
+        <origin xyz="0.127 0.099 0.112" rpy="0 0 0" />
+    </xacro:sensor_vectornav>
+
+    <!-- Front Camera -->
+    <xacro:sensor_intel_realsense_d435
+        frame_prefix="$(arg prefix)front_rgbd_camera_"
+        parent="$(arg prefix)chassis_link"
+        node_namespace="$(arg namespace)"
+        node_name="front_camera"
+        gazebo_ignition="$(arg gazebo_ignition)">
+        <origin xyz="0.541 0.0 0.18258" rpy="0 0 0"/>
+    </xacro:sensor_intel_realsense_d435>
+
+    <!-- LASERS -->
+    <xacro:sensor_sick_tim571
+        frame_prefix="$(arg prefix)front_laser_"
+        parent="$(arg prefix)chassis_link"
+        node_namespace="$(arg namespace)"
+        node_name="front_laser"
+        gazebo_ignition="$(arg gazebo_ignition)">
+        <origin xyz="0.64555 0.39595 0.1145" rpy="${PI} 0 0.775398" />
+    </xacro:sensor_sick_tim571>
+
+    <xacro:sensor_sick_tim571
+        frame_prefix="$(arg prefix)rear_laser_"
+        parent="$(arg prefix)chassis_link"
+        node_namespace="$(arg namespace)"
+        node_name="rear_laser"
+        gazebo_ignition="$(arg gazebo_ignition)">
+        <origin xyz="-0.64555 -0.39595 0.1145" rpy="${PI} 0 -2.35219"/>
+    </xacro:sensor_sick_tim571>
+
+    <xacro:sensor_robosense_helios_16p
+        frame_prefix="$(arg prefix)top_3d_laser_"
+        parent="$(arg prefix)chassis_link"
+        node_namespace="$(arg namespace)"
+        node_name="top_3d_laser"
+        gazebo_ignition="$(arg gazebo_ignition)">
+        <origin xyz="0.60955 0.0 -0.0145" rpy="${PI} 0.025 0.018"/>
+    </xacro:sensor_robosense_helios_16p>
+
+	<!-- Controllers -->
+
+    <xacro:if value="$(arg gazebo_ignition)">
+        <xacro:rbvogui_xl_gz_ignition_control namespace="$(arg namespace)" prefix="$(arg prefix)" />
+    </xacro:if>
+    <!-- Commented out for MoveIt demo - demo.launch.py provides its own ros2_control config -->
+    <!-- <xacro:unless value="$(arg gazebo_ignition)">
+        <xacro:rbvogui_xl_base_hw_controller />
+    </xacro:unless> -->
+
+    <!-- Liftkit and UR20 -->
+    <xacro:include filename="$(find ewellix_description)/urdf/ewellix_macro.xacro" />
+    <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro" />
+    <xacro:ewellix_lift
+        tf_prefix="$(arg prefix)ewellix_"
+        parent="$(arg prefix)chassis_link"
+        parameters_file='$(find ewellix_description)/config/ur_620.yaml'
+        generate_ros2_control_tag="false">
+        <origin xyz="0.275 0.0 0.0165" rpy="0 0 0"/>
+    </xacro:ewellix_lift>
+    
+    <!-- parameters -->
+    <xacro:property name="ur_type" value="ur20" />
+
+    <xacro:arg name="joint_limit_params" default="$(find ur_description)/config/${ur_type}/joint_limits.yaml"/>
+    <xacro:arg name="kinematics_params" default="$(find ur_description)/config/${ur_type}/default_kinematics.yaml"/>
+    <xacro:arg name="physical_params" default="$(find ur_description)/config/${ur_type}/physical_parameters.yaml"/>
+    <xacro:arg name="visual_params" default="$(find ur_description)/config/${ur_type}/visual_parameters.yaml"/>
+    <xacro:arg name="transmission_hw_interface" default=""/>
+    <xacro:arg name="safety_limits" default="false"/>
+    <xacro:arg name="safety_pos_margin" default="0.15"/>
+    <xacro:arg name="safety_k_position" default="20"/>
+    <!--When using gazebo simulations absolute paths are necessary.-->
+    <xacro:arg name="force_abs_paths" default="false" />
+    
+    <xacro:ur_robot
+        name="ur"
+        tf_prefix="$(arg prefix)arm_"
+        parent="$(arg prefix)ewellix_mount_link"
+        joint_limits_parameters_file="$(arg joint_limit_params)"
+        kinematics_parameters_file="$(arg kinematics_params)"
+        physical_parameters_file="$(arg physical_params)"
+        visual_parameters_file="$(arg visual_params)"
+        safety_limits="$(arg safety_limits)"
+        safety_pos_margin="$(arg safety_pos_margin)"
+        safety_k_position="$(arg safety_k_position)"
+        force_abs_paths="$(arg force_abs_paths)"
+        >
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:ur_robot>
+
+</robot>

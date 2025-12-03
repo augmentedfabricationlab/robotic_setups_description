@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="rbvogui_xl_ros2_control" params="name initial_positions_file">
+        <xacro:property name="initial_positions" value="${xacro.load_yaml(initial_positions_file)['initial_positions']}"/>
+
+        <ros2_control name="${name}" type="system">
+            <hardware>
+                <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+                <plugin>mock_components/GenericSystem</plugin>
+            </hardware>
+            <joint name="robot_arm_shoulder_pan_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_shoulder_pan_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robot_arm_shoulder_lift_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_shoulder_lift_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robot_arm_elbow_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_elbow_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robot_arm_wrist_1_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_wrist_1_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robot_arm_wrist_2_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_wrist_2_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robot_arm_wrist_3_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_arm_wrist_3_joint']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <!-- Publish state for non-arm joints so MoveIt knows complete robot state -->
+            <joint name="robot_front_left_steering_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_front_left_steering_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_front_left_wheel_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_front_left_wheel_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_front_right_steering_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_front_right_steering_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_front_right_wheel_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_front_right_wheel_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_back_left_steering_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_back_left_steering_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_back_left_wheel_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_back_left_wheel_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_back_right_steering_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_back_right_steering_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_back_right_wheel_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_back_right_wheel_joint']}</param>
+                </state_interface>
+            </joint>
+            <joint name="robot_ewellix_lower_joint">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['robot_ewellix_lower_joint']}</param>
+                </state_interface>
+            </joint>
+
+        </ros2_control>
+    </xacro:macro>
+</robot>
